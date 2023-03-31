@@ -1,38 +1,19 @@
 # info1111
-Student Records Management System
-This project is a simple student records management system implemented in C. The program allows users to add, search, delete, and display student records.
+# Student Records Management System
 
-Getting Started
-To run the program, you will need to have a C compiler installed on your computer. The program has been tested on the following compilers:
+This is a simple student records management system implemented in C. It allows users to perform operations such as adding, searching, deleting, and displaying student records. The project is aimed at helping users keep track of their student records in a structured manner.
 
-GCC
-Clang
+## Features
+
+- Add a new student record: Users can add a new student record to the system by entering details such as name, age, gender, ID number, and grades for math, science, and English. The system validates the input and adds the record to the database.
+- Search for a student record: Users can search for a specific student record by ID number. The system searches the database and displays the record if found.
+- Delete a student record: Users can delete a student record by ID number. The system searches the database and deletes the record if found.
+- Display all student records: Users can display all the student records in the system. The system displays the records in a structured manner.
+
+## Getting Started
+
+To get started with the project, you will need to have a C compiler installed on your computer. The project has been tested on the following compilers:
+- GCC
+- Clang
+
 To compile the program, navigate to the directory containing the source code and type the following command in the terminal:
-
-go
-Copy code
-make
-This will create an executable file called student_records in the same directory. To run the program, type the following command in the terminal:
-
-bash
-Copy code
-./student_records
-This will start the program and display a menu with the available options.
-
-Usage
-The program provides the following options in the menu:
-
-Add a new student record
-Search for a student record by ID number
-Delete a student record by ID number
-Display all student records
-Quit
-To add a new student record, select option 1 and enter the details when prompted. The program will check if the record is valid before adding it to the database.
-
-To search for a student record, select option 2 and enter the ID number when prompted. The program will search the database and display the record if found.
-
-To delete a student record, select option 3 and enter the ID number when prompted. The program will search the database and delete the record if found.
-
-To display all student records, select option 4. The program will display all the records in the database.
-
-To quit the program, select option 5
