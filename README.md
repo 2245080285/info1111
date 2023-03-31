@@ -16,4 +16,5 @@ To get started with the project, you will need to have a C compiler installed on
 - GCC
 - Clang
 
-To compile the program, navigate to the directory containing the source code and type the following command in the terminal:
+To compile the program, navigate to the directory containing the source code and type the following command in the terminal: make
+
