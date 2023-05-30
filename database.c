@@ -16,7 +16,7 @@ struct student {
 
 
 struct student *records;
-int num_records=0;
+int *num_records=0;
 
 
 
@@ -48,16 +48,16 @@ void add_student() {
     scanf("%f", &new_student.grade_english);
   
     if (check_student_detail(new_student) == 1){
-        records[num_records] = new_student;
+        records[*num_records] = new_student;
     }else{
         printf("invalid detail of student ");
     }
-    (num_records)++;
+    (*num_records)++;
 }
 
 void search_student(int id_number) {
     int i;
-    for (i = 0; i < num_records; i++) {
+    for (i = 0; i < *num_records; i++) {
         if (records[i].id_number == id_number) {
             printf("Name: %s\n", records[i].name);
             printf("Age: %d\n", records[i].age);
@@ -74,13 +74,13 @@ void search_student(int id_number) {
 
 void delete_student(int id_number) {
     int i;
-    for (i = 0; i < num_records; i++) {
+    for (i = 0; i < *num_records; i++) {
         if (records[i].id_number == id_number) {
             int j;
-            for (j = i; j < num_records - 1; j++) {
+            for (j = i; j < *num_records - 1; j++) {
                 records[j] = records[j + 1];
             }
-            (num_records)--;
+            (*num_records)--;
             printf("Student with ID number %d deleted\n", id_number);
             return; 
         }
@@ -90,7 +90,7 @@ void delete_student(int id_number) {
 
 void display_all_students() {
     int i;
-    for (i = 0; i < num_records; i++) {
+    for (i = 0; i < *num_records; i++) {
         printf("Name: %s\n", records[i].name);
         printf("Age: %d\n", records[i].age);
         printf("Gender: %s\n", records[i].gender);
@@ -105,7 +105,7 @@ void display_all_students() {
 
 int main() {
     records = malloc(MAX_STUDENTS * sizeof(struct student));
-    
+    num_records = malloc(sizeof(int));
     int id_number;
     int choice = 0;
 
